@@ -9,6 +9,7 @@ export default class extends BaseSchema {
       table.string('nome', 50).notNullable()
       table.integer('capacidade')      
       table.string('tipo', 1).notNullable()
+      
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */
