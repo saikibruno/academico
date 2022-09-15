@@ -14,5 +14,9 @@ export default class CursosController {
         return Curso.create(dados)
     }
      */
-    store(){}
+    store({request}){
+        const dados = request.only(['nome','duracao','modalidade'])
+
+        return Curso.create(dados)
+    }
 }

@@ -26,3 +26,6 @@ Route.get('/', async () => {
 
 Route.get('/cursos', 'CursosController.index')
 Route.post('/cursos', 'CursosController.store')
+
+Route.get('/diciplinas', 'DiciplinasController.index')
+Route.post('/diciplinas', 'DiciplinasController.store')
