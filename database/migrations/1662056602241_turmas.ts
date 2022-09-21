@@ -9,7 +9,7 @@ export default class extends BaseSchema {
       table.string('nome', 50).notNullable()
       table.integer('professor_id').unsigned().references('id').inTable('professores').notNullable()
       table.integer('semestre_id').unsigned().references('id').inTable('semestres').notNullable()
-      table.integer('diciplina_id').unsigned().references('id').inTable('diciplinas').notNullable()
+      table.integer('disciplina_id').unsigned().references('id').inTable('disciplinas').notNullable()
       table.integer('sala_id').unsigned().references('id').inTable('salas').notNullable()
       table.string('turno', 1).notNullable()
       /**

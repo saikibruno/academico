@@ -24,8 +24,8 @@ Route.get('/', async () => {
   return { hello: 'world' }
 })
 
-Route.get('/cursos', 'CursosController.index')
-Route.post('/cursos', 'CursosController.store')
+Route.get('/cursos', 'CursoController.index')
+Route.post('/cursos', 'CursoController.store')
 
-Route.get('/diciplinas', 'DiciplinasController.index')
-Route.post('/diciplinas', 'DiciplinasController.store')
+Route.get('/disciplinas', 'DisciplinaController.index')
+Route.post('/disciplinas', 'DisciplinaController.store')

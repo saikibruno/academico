@@ -1,9 +1,9 @@
 import BaseSeeder from '@ioc:Adonis/Lucid/Seeder'
-import Diciplina from 'App/Models/Diciplina'
+import Disciplina from 'App/Models/Disciplina'
 
 export default class extends BaseSeeder {
   public async run () {
-    await Diciplina.createMany([
+    await Disciplina.createMany([
       {nome: "FRONTEND", cursoId: 1},
       {nome: "BACKEND", cursoId: 1},
       {nome: "LEI ORGANICA DF", cursoId: 5},

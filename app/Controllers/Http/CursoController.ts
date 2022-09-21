@@ -2,7 +2,7 @@
 
 import Curso from "App/Models/Curso";
 
-export default class CursosController {
+export default class CursoController {
 
     index(){
         return Curso.all()
