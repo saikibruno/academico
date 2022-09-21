@@ -7,13 +7,7 @@ export default class CursoController {
     index(){
         return Curso.all()
     }
-    /*
-    store(){
-        const dados = {nome: 'REDES', duracao:5,modalidade:'P'}
-        
-        return Curso.create(dados)
-    }
-     */
+    
     store({request}){
         const dados = request.only(['nome','duracao','modalidade'])
 

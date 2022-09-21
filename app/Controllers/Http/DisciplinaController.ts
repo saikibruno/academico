@@ -7,5 +7,9 @@ export default class DisciplinaController {
         return Disciplina.all()
     }
 
-    store(){}
+    store({request}){
+        const dados = request.only(['nome','cursoId'])
+
+        return Disciplina.create(dados)
+    }
 }
