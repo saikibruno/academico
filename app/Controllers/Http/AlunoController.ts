@@ -12,4 +12,24 @@ export default class AlunoController {
 
         return Aluno.create(dados)
     }
+
+    show({request}){
+        const id = request.param('id')
+        return Aluno.findOrFail(id)
+    }
+
+    async destroy({request}){
+        const id = request.param('id')
+        const dados = await Aluno.findOrFail(id)
+
+        return dados.delete()
+    }
+
+    async update({request}){
+        const id = request.param('id')
+        const dados = await Aluno.findOrFail(id)
+        const dado = await request.only(['nome','cpf','matricula','email','telefone','cep','logradouro','complemento','numero','bairro'])
+        
+        return dados.merge(dado).save()
+    }
 }

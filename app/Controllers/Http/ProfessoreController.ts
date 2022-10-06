@@ -9,7 +9,27 @@ export default class ProfessoreController {
 
     store({request}){
         const dados = request.only(['nome','cpf','matricula','salario','email','telefone','cep','logradouro','complemento','numero','bairro'])
-        //"nome","cpf","matricula","salario","email","telefone","cep","logradouro","complemento","numero","bairro"
+        
         return Professore.create(dados)
+    }
+
+    show({request}){
+        const id = request.param('id')
+        return Professore.findOrFail(id)
+    }
+
+    async destroy({request}){
+        const id = request.param('id')
+        const dados = await Professore.findOrFail(id)
+
+        return dados.delete()
+    }
+
+    async update({request}){
+        const id = request.param('id')
+        const dados = await Professore.findOrFail(id)
+        const dado = await request.only(['nome','cpf','matricula','salario','email','telefone','cep','logradouro','complemento','numero','bairro'])
+        
+        return dados.merge(dado).save()
     }
 }

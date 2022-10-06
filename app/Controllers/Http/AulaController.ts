@@ -12,4 +12,24 @@ export default class AulaController {
 
         return Aula.create(dados)
     }
+
+    show({request}){
+        const id = request.param('id')
+        return Aula.findOrFail(id)
+    }
+
+    async destroy({request}){
+        const id = request.param('id')
+        const dados = await Aula.findOrFail(id)
+
+        return dados.delete()
+    }
+
+    async update({request}){
+        const id = request.param('id')
+        const dados = await Aula.findOrFail(id)
+        const dado = await request.only(['data','conteudo','turmaId'])
+        
+        return dados.merge(dado).save()
+    }
 }

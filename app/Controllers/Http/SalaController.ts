@@ -12,4 +12,24 @@ export default class SalaController {
 
         return Sala.create(dados)
     }
+
+    show({request}){
+        const id = request.param('id')
+        return Sala.findOrFail(id)
+    }
+
+    async destroy({request}){
+        const id = request.param('id')
+        const sala = await Sala.findOrFail(id)
+
+        return sala.delete()
+    }
+
+    async update({request}){
+        const id = request.param('id')
+        const dados = await Sala.findOrFail(id)
+        const dado = await request.only(['nome','capacidade','tipo'])
+        
+        return dados.merge(dado).save()
+    }
 }
