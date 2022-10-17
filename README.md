@@ -3,7 +3,7 @@
 
 # API Academico
 
-API feito na materia de BACKEND do curso de Análise e Desenvolvimento de sistemas :computer:.
+API desenvolvida na materia de BACKEND do curso de Análise e Desenvolvimento de sistemas :computer:.
 
 ## Status do projeto
 
