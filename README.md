@@ -257,8 +257,12 @@ Dentro da pasta Curso criar "New HTTP Request" para cada um desses.
 </details>
 
 ## 📝 Licença
-
 Este projeto esta sobe a licença [MIT](./LICENSE).
 
-Bruno Saiki 👋🏽 entre em contato:  <a href="https://www.linkedin.com/in/bruno-saiki/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+Bruno Saiki 👋🏽 entre em contato:
+
+<a href="https://www.linkedin.com/in/bruno-saiki/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
   <a href = "mailto:saiki.bruno@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
