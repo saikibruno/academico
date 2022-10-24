@@ -1,6 +1,7 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
 
+
 export default class Chamada extends BaseModel {
   @column({ isPrimary: true })
   public id: number
@@ -19,4 +20,5 @@ export default class Chamada extends BaseModel {
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
+
 }

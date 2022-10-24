@@ -5,7 +5,7 @@ import Curso from "App/Models/Curso";
 export default class CursoController {
 
     index(){
-        return Curso.all()
+        return Curso.query().preload('disciplinas')
     }
     
     store({request}){

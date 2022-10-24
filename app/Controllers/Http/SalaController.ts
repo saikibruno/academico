@@ -4,7 +4,7 @@ import Sala from "App/Models/Sala";
 
 export default class SalaController {
     index(){
-        return Sala.all()
+        return Sala.query().preload('turmas')
     }
 
     store({request}){

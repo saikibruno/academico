@@ -4,7 +4,7 @@ import Professore from "App/Models/Professore"
 
 export default class ProfessoreController {
     index(){
-        return Professore.all()
+        return Professore.query().preload('turmas')
     }
 
     store({request}){

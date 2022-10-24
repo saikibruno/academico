@@ -4,7 +4,7 @@ import Turma from "App/Models/Turma"
 
 export default class TurmaController {
     index(){
-        return Turma.all()
+        return Turma.query().preload('disciplina').preload('professores').preload('sala').preload('semestre').preload('alunos').preload('aulas')
     }
     
     store({request}){

@@ -21,7 +21,18 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', async () => {
-  return { hello: 'world' }
+  return {
+    cursos_get: "http://localhost:3333/cursos",
+    salas_get: "http://localhost:3333/salas",
+    disciplinas_get: "http://localhost:3333/disciplinas",
+    semestres_get: "http://localhost:3333/semestres",
+    professores_get: "http://localhost:3333/professores",
+    alunos_get: "http://localhost:3333/alunos",
+    turmas_get: "http://localhost:3333/turmas",    
+    turma_alunos_get: "http://localhost:3333/turma_alunos",
+    aulas_get: "http://localhost:3333/aulas",
+    chamadas_get: "http://localhost:3333/chamadas"
+  }
 })
 
 Route.resource('/cursos','CursoController').apiOnly()

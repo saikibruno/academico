@@ -4,7 +4,7 @@ import Aluno from "App/Models/Aluno"
 
 export default class AlunoController {
     index(){
-        return Aluno.all()
+        return Aluno.query().preload('turmas').preload('aulas')
     }
 
     store({request}){
