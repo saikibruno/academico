@@ -28,7 +28,8 @@ export default class ProfessoreValidator {
       rules.maxLength(100)
     ]),
 
-    cpf: schema.number([      
+    cpf: schema.number([  
+      
     ]),
 
     matricula: schema.string([
