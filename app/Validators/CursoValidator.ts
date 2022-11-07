@@ -9,10 +9,12 @@ export default class CursoValidator {
       rules.maxLength(50)
     ]),
     duracao: schema.number.optional(),
-    modalidade: schema.string([
-      rules.maxLength(1)
-    ])
+    modalidade: schema.enum(['P', 'E', 'H'])
   })
 
-  public messages: CustomMessages = {}
+  public messages: CustomMessages = {
+    required: 'O campo {{field}} é obrigatório.',
+    maxLength:'Número máximo de caracteres atingido.',
+    enum:'Escolhas disponiveis {{options.choices}}'
+  }
 }
